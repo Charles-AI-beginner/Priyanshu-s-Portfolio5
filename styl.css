@@ -1,14 +1,47 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-    text-decoration: none;
     list-style: none;
+    color:rgb(163, 147, 155)
 }
-.header{
+.home {
+    display: flex;
+    justify-content: space-between;  /* Ensures space between the text and image */
+    align-items: center;
+    flex-wrap: wrap;  /* Allows the content to stack on smaller screens */
+    gap: 30px;  /* Adds space between the text and the image */
+    padding-right: 20px; /* Ensures the image box stays 20px from the right of the page */
+}
+
+body{
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.intro h2{
+    font-size: 35px;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.intro p{
+    font-size: 20px;
+}
+
+/* header{
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+    padding: 0px;
+    flex-wrap: wrap;
+    z-index: 100;
+ 
+    border-radius: 10px;
+    border-bottom: #fff;
+    border-width: 2px;
+} */
+header{
     position: fixed;
-    background:black;
+
     width:100%;
     top:0;
     left:0;
@@ -19,87 +52,310 @@
     align-items: center;
     z-index: 100;
 }
-.name{
-    font-size: 30px;
-    font-weight: 600;
+   
+.shortcuts{
+    display: flex;
+    padding:20px;
+    font-weight: 900;
+}
+.shortcuts a{
+    color: #c283cc;
+
+}
+.white{
+    color: white;
+    font-family: "Silkscreen", sans-serif;
+}
+.silkscreen{
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+    color:#ffffffd0;
+}
+section{
+    padding:10px 10px 20px 20px;
+}
+.logo{
+    font-size: 35px;
     transition: 0.3s ease;
-    color:rgb(0, 238, 255);
-}
-.name:hover{
-    color:rgb(21, 255, 255);
-    text-shadow: 0 0 25px rgb(0, 238, 255),
-                 0 0 50px rgb(0, 238, 255);
-    transform: scale(1.1);
-}
-span{
-    color:white
-}
-.links a{
-    font-size: 18px;
-    color:aliceblue;
-    font-weight: 500;
-    margin: 0 20px;
-    border-bottom: 3px solid transparent;
+    color:#ff008cdc;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+    padding: 6px;
     transition: 0.3s ease;
 }
+.logo a:hover{
     
-.links a:hover,
-.links a.active{
-    color:rgb(0, 238, 255);
-    border-bottom: 3px solid;
-}
-.contact{
-    padding: 10px 28px;
-    background-color: azure;
-    color: black;
-    border: 2px solid transparent;
-    font-size: 16px;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-
-}
-.contact:hover{
-    background-color:rgb(0, 238, 255) ;
-    box-shadow: 0 0 25px rgb(0, 238, 255);
-    color:aliceblue;
+    text-shadow: 0 0 15px rgb(255, 63, 229);
+    color:rgb(255, 0, 191);
     transform: scale(1.1);
+}
+.me{
+    font-size: 35px;
+}
+.shortcuts a:hover,
+.shortcuts a.active{
+    color:rgb(196, 196, 196);
+}
+body{
+    padding: 10px 10px;
+    background-color: #000000;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    width:100%;
+}
+.img-box {
+    padding: 100px 0px 0px 0px;
+    width: 440px; /* Ensure the image box has a fixed width */
+    margin-right: 10px; /* Adds a 20px gap from the right edge of the page */
+    border-radius: 10%;
+    border: 3px ;
+    text-align: center; /* Centers the image inside the box */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
 
+.img-box img {
+    width: 100%; /* Makes the image scale to fill the container */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* Ensures the image is properly cropped */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .home{
-    width:100%;
-    min-height: 100vh;;
-    background: rgb(91, 255, 233);
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 7em;
-    padding: 30px 12% 0;
+    flex-wrap: wrap;
+    gap: 50px;
 }
-.home-content{
-    max-width: 800px;
+.icons{
+    border-radius: 40%;
+    width: 100px;
+    border: 3px solid black;
+    transition: 0.3s ease;
 }
-.home-content h3{
-    font-size: 42px;
+.icons:hover{
+    box-shadow: 0 0 15px rgb(255, 63, 229);
+    transform: scale(1.1);
 }
-.home-content h1{
-    font-size: 63px;
-    line-height: 1.2;
+.passion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content vertically and horizontally within the section */
+    width: 100%; /* Ensures the parent spans the full width */
+    padding:0px 10px;
 }
-.crt{
-    font-family: "Sixtyfour Convergence", sans-serif;
+
+.skills {
+    display: flex;
+    flex-wrap: wrap; /* Optional: Allows items to wrap if there are many */
+    gap: 80px;
+    justify-content: center; /* Aligns items horizontally within .skills */
+    width: 100%; /* Ensures .skills spans the full width for proper alignment */
+    
+    padding: 15px 10px 10px 10px;
+    
 }
-.buttn{
+
+.works{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content vertically and horizontally within the section */
+    width: 100%; /* Ensures the parent spans the full width */
+    background: linear-gradient(300deg, #e73db4, #670ddd, #cc00e7);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    border-radius: 30px;
+    padding:0px 10px 20px 10px;
+    border:2px solid;
+}
+.projects{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap:wrap;
+}
+
+.intro{
+    padding:150px 10px 20px 10px;
+}
+.projects>div{
+    padding:20px;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.lmao{
+    display:flex;
+    
+    gap:50px;
+    align-items:center ;
+}
+.row1 {
+    display: flex; /* Enables flex layout */
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between columns */
+    justify-content: center; /* Centers the content horizontally */
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+.col{
+    
+    box-sizing: border-box;
+    text-align: center; /* Centers text */
+    /* background: linear-gradient(300deg, #e73db4, #670ddd, #cc00e7); */
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    padding: 10px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    /* border-radius: 10%; */
+    /* border: 2px solid rgb(0, 0, 0); */
+}
+
+.col>p{
+    font-size: 20px;
+}
+
+.ss {
+    width: 500px; /* Allows the image to scale naturally */
+    max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+    height: auto; /* Maintains the aspect ratio */
+    margin-top: 10px;
+    padding: 10px;
+    transition: 0.3s ease;
+    border: 2px solid rgb(0, 0, 0); 
+    background: linear-gradient(300deg, #e73db4, #670ddd, #cc00e7);
+}
+.ss:hover{
+    box-shadow: 0 0 15px rgb(255, 63, 229);
+    transform: scale(1.1);
+}
+
+.title {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    font-family: "Silkscreen", sans-serif;
+    color:rgba(255, 255, 255, 0.952)
+}
+.row1{
+    width: 100%;
+}
+.col>h1{
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+    padding:7px;
+    color:#fdfdfd
+}
+body{
+    background-image: url('./pictures/altumcode-TD_hYLm407A-unsplash.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+.about{
     text-align: center;
 }
-footer{
-    color:rgb(216, 206, 206) ;
-    background-color: rgb(165, 165, 165);
-    right: 0;
-    left: 0;
-    bottom: 0%;
+.about>div>p{
+    font-size: 20px;
+}
+p{
+    color:rgb(226, 226, 226)
+}
+
+.contact{
+    width: 100%;
+    text-align: center;
+}
+
+.click{
+    font-size: 20px;
+    border-width: 3px;
+    background-color: rgb(183, 0, 255);
+    padding: 10px;
+    margin: 0;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.auto-type{
+    color:#ff008cd0;
+}
+@media (max-width: 768px){
+    .row1{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .col{
+        width: 100%;
+    }
+    .ss {
+        width: auto; /* Allows the image to scale naturally */
+        max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+        height: auto; /* Maintains the aspect ratio */
+        margin-top: 10px;
+        padding: 10px;
+        transition: 0.3s ease;
+    
+    }
+    .lmao{
+        display: flex;
+        flex-direction: column;
+    }
+    .img-box{
+        padding: 0px;
+    }
+    .logo{
+        display: none;
+    }
+    
+    .shortcuts{
+        padding:0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+footer {
+
+    background-color: #090808;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #444;
+    margin-top: 20px;
+}
+.shortcuts a{
+    text-decoration: none;
+}
+.logo a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+button{
+    text-decoration: none;
+}
+.container1 a{
+    text-decoration: none;
+}
+.about a{
+    text-decoration: none;
+}
+.passion a{
+    text-decoration: none;
 }
 .img-box img{
     border-radius: 50%;
